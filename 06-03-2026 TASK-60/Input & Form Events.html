@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 8 - Input &amp; Form Events</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 28px 20px;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background: #f0fdfa;
+            color: #1f2937;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+            padding-left: 12px;
+            border-left: 6px solid #0f766e;
+            font-size: 24px;
+            color: #0f766e;
+        }
+
+        .panel {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+        }
+
+        button {
+            padding: 9px 16px;
+            margin: 5px 5px 5px 0;
+            border: none;
+            border-radius: 6px;
+            background: #0f766e;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover { opacity: 0.88; }
+
+        button:focus-visible,
+        input:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #0f766e;
+            outline-offset: 2px;
+        }
+
+        #output, #outputArea {
+            margin-top: 18px;
+            padding: 12px 14px;
+            min-height: 60px;
+            border-radius: 8px;
+            background: #111827;
+            color: #e5e7eb;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        #output p, #outputArea p { margin: 4px 0; }
+
+        label { display: block; margin-top: 8px; font-weight: 600; }
+        input, select, textarea { display: block; width: 100%; padding: 9px; margin: 6px 0 10px; border: 1px solid #94a3b8; border-radius: 6px; font: inherit; }
+        #livePreview { margin-top: 14px; padding: 12px; background: #ccfbf1; border-radius: 8px; }
+        #output { max-height: 200px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>Unit 8: Input &amp; Form Events</h1>
+
+    <div class="panel">
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Type your name">
+
+            <label for="color">Favorite Color:</label>
+            <select id="color">
+                <option value="">Select</option>
+                <option value="orange">Orange</option>
+                <option value="purple">Purple</option>
+                <option value="teal">Teal</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="3" placeholder="Type something..."></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="reset" id="resetBtn">Reset</button>
+        </form>
+
+        <div id="livePreview">
+            <strong>Live Preview:</strong> <span id="preview">Waiting for input...</span>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script src="Input & Form Events.js"></script>
+</body>
+</html>
